@@ -2,18 +2,18 @@
 
 import { Router } from "express";
 
-import { authenticateCompany } from "../middlewares/authenticateCompany.middleware";
-import { verifyCompanyExistence } from "../middlewares/verifyCompanyExistence.middleware";
-import { verifyDuplicateVehiclePlate } from "../middlewares/verifyDuplicateVehiclePlate.middleware";
-import { validate } from "../middlewares/validate.middleware";
-import { verifyVehicleExistence } from "../middlewares/verifyVehicleExistence.middleware";
+import { authenticateCompany } from "../middlewares/authenticateCompany.middleware.js";
+import { verifyCompanyExistence } from "../middlewares/verifyCompanyExistence.middleware.js";
+import { verifyDuplicateVehiclePlate } from "../middlewares/verifyDuplicateVehiclePlate.middleware.js";
+import { validate } from "../middlewares/validate.middleware.js";
+import { verifyVehicleExistence } from "../middlewares/verifyVehicleExistence.middleware.js";
 
-import { vehicleSchema } from "../models/vehicle.models";
+import { vehicleSchema } from "../models/vehicle.models.js";
 
-import { createVehicle } from "../controllers/vehicle/vehicle.controller";
-import { listVehicle } from "../controllers/vehicle/vehicle.controller";
-import { updateVehicle } from "../controllers/vehicle/vehicle.controller";
-import { destroyVehicle } from "../controllers/vehicle/vehicle.controller";
+import { createVehicle } from "../controllers/vehicle/vehicle.controller.js";
+import { listVehicle } from "../controllers/vehicle/vehicle.controller.js";
+import { updateVehicle } from "../controllers/vehicle/vehicle.controller.js";
+import { destroyVehicle } from "../controllers/vehicle/vehicle.controller.js";
 
 const routerVehicle = Router();
 

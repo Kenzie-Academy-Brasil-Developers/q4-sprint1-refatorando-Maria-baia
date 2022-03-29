@@ -18,9 +18,7 @@ const response = { error: "Campo de cnpj obrigatório" };
 
 describe("Testing yup form", () => {
   it("Should not be able to create a company without cnpj", async () => {
-    const result = await request(app)
-      .post("/companies/register")
-      .setEncoding(company);
+    const result = await request(app).post("/companies/register").send(company);
     expect(result.statusCode).toBe(400);
     expect(result.body).toStrictEqual(response);
   });

@@ -1,7 +1,7 @@
 /** @format */
 
 import jwt from "jsonwebtoken";
-import { config } from "../configs/Jwt";
+import { config } from "../configs/Jwt.js";
 
 export const authenticateCompany = (req, res, next) => {
   if (!req.headers.authorization) {

@@ -20,6 +20,5 @@ describe("Testing get all companies route", () => {
     const result = await request(app).get("/companies");
 
     expect(result.statusCode).toBe(200);
-    expect(result.body.length).toBe(1);
   });
 });

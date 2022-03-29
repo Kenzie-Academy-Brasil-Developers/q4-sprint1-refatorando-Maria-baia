@@ -1,6 +1,6 @@
 /** @format */
 
-const validate = (schema) => async (req, res, next) => {
+export const validate = (schema) => async (req, res, next) => {
   const resource = req.body;
 
   try {

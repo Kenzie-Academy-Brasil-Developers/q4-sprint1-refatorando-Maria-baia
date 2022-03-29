@@ -1,4 +1,5 @@
 /** @format */
+import * as yup from "yup";
 
 export const companySchema = yup.object().shape({
   name: yup

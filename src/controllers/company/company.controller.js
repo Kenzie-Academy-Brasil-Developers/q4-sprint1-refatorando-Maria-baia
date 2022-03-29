@@ -1,8 +1,8 @@
 /** @format */
 import { v4 as uuidv4 } from "uuid";
-import bcrypt from "bcrypt.js";
-import { config } from "../../configs/Jwt";
-import { companies } from "../../services/companies.service";
+import bcrypt from "bcryptjs";
+import { config } from "../../configs/Jwt.js";
+import { companies } from "../../configs/database.js";
 
 export const create = async (req, res) => {
   const hashedPassword = await bcrypt.hash(req.body.password, 10);

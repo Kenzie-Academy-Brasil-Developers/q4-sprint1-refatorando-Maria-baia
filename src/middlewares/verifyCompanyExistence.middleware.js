@@ -1,8 +1,8 @@
 /** @format */
 
-import { companies } from "../services/companies.service";
+import { companies } from "../configs/database.js";
 
-export const verifyCompanyExistence = (req, req, next) => {
+export const verifyCompanyExistence = (req, res, next) => {
   let { cnpj } = req.params;
   let company = companies.find((company) => company.cnpj == cnpj);
 

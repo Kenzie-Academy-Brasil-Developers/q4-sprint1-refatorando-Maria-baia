@@ -1,6 +1,6 @@
 /** @format */
 
-import { companies } from "../services/companies.service";
+import { companies } from "../configs/database.js";
 
 export const verifyDuplicateVehiclePlate = (req, res, next) => {
   let { plate } = req.body;

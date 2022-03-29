@@ -2,12 +2,12 @@
 
 import { Router } from "express";
 
-import { authenticateCompany } from "../middlewares/authenticateCompany.middleware";
-import { validate } from "../middlewares/validate.middleware";
-import { verifyCompanyExistence } from "../middlewares/verifyCompanyExistence.middleware";
-import { verifyDuplicateCnpj } from "../middlewares/verifyDuplicateCnpj.middleware";
+import { authenticateCompany } from "../middlewares/authenticateCompany.middleware.js";
+import { validate } from "../middlewares/validate.middleware.js";
+import { verifyCompanyExistence } from "../middlewares/verifyCompanyExistence.middleware.js";
+import { verifyDuplicateCnpj } from "../middlewares/verifyDuplicateCnpj.middleware.js";
 
-import { companySchema } from "../models/company.models";
+import { companySchema } from "../models/company.models.js";
 
 import {
   create,
@@ -15,7 +15,7 @@ import {
   list,
   update,
   destroy,
-} from "../controllers/company/company.controller";
+} from "../controllers/company/company.controller.js";
 
 const router = Router();
 
