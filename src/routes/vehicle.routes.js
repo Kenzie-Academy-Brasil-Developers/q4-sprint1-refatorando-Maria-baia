@@ -34,7 +34,7 @@ routerVehicle.get(
 );
 
 routerVehicle.put(
-  "/companies/:cnpj/vehivles/:plate",
+  "/companies/:cnpj/vehicles/:plate",
   authenticateCompany,
   verifyCompanyExistence,
   verifyVehicleExistence,

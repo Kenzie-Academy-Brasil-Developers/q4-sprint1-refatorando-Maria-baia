@@ -6,7 +6,6 @@ import app from "../../app";
 
 const company = {
   name: "Maria's",
-  cnpj: "00000000000000",
   password: "12345678",
   cep: "12345678",
   address: "Rua Criciúma",
@@ -16,8 +15,8 @@ const company = {
 };
 
 describe("Testing Middleware", () => {
-  it("Should create a company", async () => {
+  it("Should return an error when creating a company without cnpj", async () => {
     const result = await request(app).post("/companies/register").send(company);
-    expect(result.statusCode).toBe(201);
+    expect(result.statusCode).toBe(400);
   });
 });

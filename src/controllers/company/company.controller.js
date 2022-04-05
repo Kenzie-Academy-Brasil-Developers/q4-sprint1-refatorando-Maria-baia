@@ -1,8 +1,8 @@
-/** @format */
 import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcryptjs";
 import { config } from "../../configs/Jwt.js";
 import { companies } from "../../configs/database.js";
+import jwt from "jsonwebtoken";
 
 export const create = async (req, res) => {
   const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -53,9 +53,9 @@ export const update = (req, res) => {
 };
 
 export const destroy = (req, res) => {
-  let { cnpj } = req.params;
+  const { company } = req;
 
-  companies = companies.filter((company) => company.cnpj !== cnpj);
+  companies.filter((c) => c.cnpj !== company.cnpj);
 
-  return res.status(200).jso({ message: "Company deleted", companies });
+  return res.status(200).json({ message: "Company deleted", companies });
 };

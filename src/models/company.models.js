@@ -7,7 +7,7 @@ export const companySchema = yup.object().shape({
     .required("Campo de nome obrigatório"),
   cnpj: yup
     .string("Formato de cnpj inválido")
-    .matches(/^[0-9]{14}$/)
+    .matches(/^[0-9]{14}$/, "Cnpj must be like 00000000000000")
     .required("Campo de cnpj obrigatório"),
   password: yup
     .string("Formato de senha inválido")

@@ -11,5 +11,6 @@ export const verifyDuplicateVehiclePlate = (req, res, next) => {
   if (vehicle) {
     return res.status(400).json({ message: "Vehicle already registered" });
   }
+  req.vehicle = vehicle;
   return next();
 };

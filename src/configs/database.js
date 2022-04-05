@@ -1,3 +1,1 @@
-/** @format */
-
-export const companies = [];
+export let companies = [];
