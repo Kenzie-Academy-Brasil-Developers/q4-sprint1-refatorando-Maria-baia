@@ -21,7 +21,7 @@ export const listVehicle = (req, res) => {
 export const updateVehicle = (req, res) => {
   let { vehicle, company } = req;
   let updatedVehicle = { ...vehicle, ...req.body };
-  let index = company.vehicle.indexOf(vehicle);
+  let index = company.vehicles.indexOf(vehicle);
 
   company.vehicles[index] = updatedVehicle;
 
